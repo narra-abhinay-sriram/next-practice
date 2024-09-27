@@ -1,15 +1,16 @@
 //import Signup from "@/components/Signup"
-import axios from "axios";
-
+//import axios from "axios";
+import prisma from "../../db"
 async function fetchdata(){
-  const resp= await axios.post("http://localhost:3000/api/user")
-  return resp.data;
+ await prisma.user.findFirst({})
+ //console.log(resp)
+ return {email:"abhinay"}
 }
 const Sign = async() => {
     const resutls= await fetchdata()
   return (
     <div>
-     {resutls.mesage}
+     {resutls.email}
     </div>
   )
 }
