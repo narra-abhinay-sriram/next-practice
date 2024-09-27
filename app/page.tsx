@@ -1,8 +1,10 @@
 
-export default function Home() {
+export default  function Home() {
+  //const resutls= await fetchdata()
   return (
         <div>
-hi anna
+        
+
         </div>
   );
 }
